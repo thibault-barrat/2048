@@ -1,3 +1,20 @@
+@use '../src/styles/vars';
+
 .app {
-  color: green;
+  max-width: vars.$pixel-size * 60;
+  margin: vars.$pixel-size * 0 auto;
+
+  .header {
+    display: flex;
+    width: 100%;
+
+    > div {
+      flex: 1;
+    }
+
+    .button {
+      float: right;
+      margin: vars.$pixel-size * 3.25 vars.$pixel-size * 0;
+    }
+  }
 }

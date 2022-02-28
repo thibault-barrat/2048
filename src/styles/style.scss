@@ -1,0 +1,27 @@
+@use "./_vars";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #faf8ef;
+  color: #776e65;
+  font-size: vars.$pixel-size * 2.25;
+  line-height: vars.$pixel-size * 3.5;
+}
+
+h1 {
+  font-size: 4.5 * vars.$pixel-size;
+  line-height: 5.75 * vars.$pixel-size;
+}
+
+a {
+  color: #776e65;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
