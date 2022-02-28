@@ -6,6 +6,14 @@ import { pixelSize } from "../../Tile/models/Tile";
  * @constant {number}
  */
  export const defaultTileCount = 4;
+
+ /**
+ * The duration of every animation in ms.
+ * IMPORTANT! Check styles before modyfing this value!
+ *
+ * @constant {number} ms
+ */
+export const animationDuration = 250;
  
  /**
   * The board margin (left, right, top, bottom).
