@@ -3,6 +3,7 @@ import { BoardProvider } from "./context/BoardContext";
 import { TileMeta, tileTotalWidth } from "../Tile/models/Tile";
 import { boardMargin, defaultTileCount } from "./models/Board";
 import Tile from "../Tile";
+import Grid from "../Grid";
 import styles from "./Board.module.scss";
 
 type Props = {
@@ -28,6 +29,7 @@ const Board = ({ tiles, tileCountPerRow = defaultTileCount }: Props) => {
         tileCount={tileCountPerRow}
       >
         <div className={styles["tile-container"]}>{tileList}</div>
+        <Grid />
       </BoardProvider>
     </div>
   );

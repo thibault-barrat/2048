@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usePrevProps } from '../../hooks/usePrevProps';
+import { useBoard } from '../Board/hooks/useBoard';
 import styles from './Tile.module.scss';
 
 type Props = {
@@ -12,8 +13,8 @@ type Props = {
 }
 
 const Tile = ({ value, position, zIndex }: Props) => {
-  // retieves board properties
-  //const [containerWidth, tileCount] = useBoard();
+  // retrieves board properties
+  const [containerWidth, tileCount] = useBoard();
   //  state required to animate the highlight
   const [scale, setScale] = useState(1);
 
@@ -38,14 +39,14 @@ const Tile = ({ value, position, zIndex }: Props) => {
   /**
    * Converts tile position from array index to pixels.
    */
-  // const positionToPixels = (position: number) => {
-  //   return (position / tileCount) * (containerWidth as number);
-  // };
+  const positionToPixels = (position: number) => {
+    return (position / tileCount) * (containerWidth as number);
+  };
 
   // all animations come from CSS transition, and we pass them as styles
   const style = {
-    // top: positionToPixels(position[1]),
-    // left: positionToPixels(position[0]),
+    top: positionToPixels(position[1]),
+    left: positionToPixels(position[0]),
     transform: `scale(${scale})`,
     zIndex,
   };
