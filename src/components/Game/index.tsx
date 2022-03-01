@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useThrottledCallback } from 'use-debounce';
 import { animationDuration, defaultTileCount } from '../Board/models/Board';
+import { useGame } from './hooks/useGame/useGame';
 import Board from '../Board';
 
 const Game = () => {
