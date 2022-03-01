@@ -12,8 +12,7 @@
   text-align: center;
   font-size: vars.$pixel-size * 6;
   line-height: 2.1;
-  transition-property: left, top, transform;
-  transition-duration: 250ms, 250ms, 100ms;
+  transition: left 250ms, top 250ms, transform 100ms;
   transform: scale(1);
 
   /* -=-=-=- START OF TEXT SIZE -=-=-=- */
