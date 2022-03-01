@@ -1,0 +1,11 @@
+@use '../../styles/vars';
+
+.button {
+  background: #8f7a66;
+  border: vars.$pixel-size solid #8f7a66;
+  border-radius: vars.$pixel-size * 0.5;
+  font-size: vars.$pixel-size * 2;
+  line-height: vars.$pixel-size * 3;
+  font-weight: bold;
+  color: #f9f6f2;
+}
